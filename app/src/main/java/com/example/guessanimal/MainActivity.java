@@ -39,15 +39,13 @@ public class MainActivity extends AppCompatActivity {
                isDog = true;
                isCat = false;
                isGiraffe = false;
-               animal = "dog";
-                break;
 
+                break;
             case R.id.catBtn:
                 animalImage.setImageResource(R.drawable.cat);
                 isCat = true;
                 isDog = false;
                 isGiraffe= false;
-                animal= "cat";
                 break;
 
             case R.id.giraffeBtn:
@@ -55,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 isGiraffe = true;
                 isDog = false;
                 isCat = false;
-                animal= "giraffe";
                 break;
         }
     }
@@ -95,6 +92,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 checkAnswer();
                 break;
+        }
+        switch (view.getId()){
+            case R.id.thisDogBtn:
+                animal = "that dog";
+        }
+        switch (view.getId()){
+            case R.id.thisCatBtn:
+                animal = "that cat";
+        }
+        switch (view.getId()){
+            case R.id.thisGiraffeBtn:
+                animal = "that giraffe";
         }
     }
 }
